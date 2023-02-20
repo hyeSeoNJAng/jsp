@@ -38,6 +38,7 @@
  	
  	<!-- getAttribute()로 주소값 전달받음, 표현식을 이용하여 각각의 값 출력  -->
  	<% MemberInfo info2 = (MemberInfo)request.getAttribute("member"); %>
+ 	
  	<h4> ==========getAttribute()로 주소값 전달받음===========</h4>
  	<strong>id >> </strong><%= info2.getId() %><br>
  	<strong>password >> </strong><%= info2.getPassword() %><br>
