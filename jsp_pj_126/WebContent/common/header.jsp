@@ -14,7 +14,7 @@
 	<div class = "col-md-12">
 		<div class = "row">
 			<div id = "mainLogo" class = "col-md-2"> <!-- 메인 로고  -->
-				<a href = "http://localhost/jsp_pj_126/common/main.jsp"><img src = "http://localhost/jsp_pj_126/resources/images/main/photoZeniaPng.png" style ="width:200px;"></a>
+				<a href = "${path}/main.do"><img src = "http://localhost/jsp_pj_126/resources/images/main/photoZeniaPng.png" style ="width:200px;"></a>
 			</div>
 				<nav id ="mainNav" class ="col-md-6">	<!-- 메인 메뉴 --> 
 					<ul class ="nav_li">				

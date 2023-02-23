@@ -4,7 +4,7 @@ import pj.mvc.jsp.dto.CustomerDTO;
 
 public interface CustomerDAO {
 	// id 중복확인 처리
-	public void idCheck(String strId);
+	public int idCheck(String strId);
 	
 	// 회원가입 처리
 	public int insertCustomer(CustomerDTO dto);

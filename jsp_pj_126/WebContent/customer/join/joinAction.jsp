@@ -37,12 +37,26 @@
 			</div>
 			<hr><br>
 			<div id = "section">
-				<form action="joinAction.html" method="post" name="joinAddAction.jsp">
-					<script type = "text/javascript">
-						alert("회원가입을 축하드립니다!");
-						window.location="http://localhost/jsp_pj_126/common/main.jsp";
-					</script>
-				</form>
+						<% 
+							/* 5. 쿼리 실행 결과  출력 => insert 성공 or 실패 */
+							int insertCnt = (int)request.getAttribute("insertCnt");
+							if(insertCnt == 0){
+						%>
+							<script type = "text/javascript">
+								setTimeout(function(){
+									alert("회원가입 실패입니다 ㅠ_ㅠ");
+									window.location="http://localhost/jsp_pj_126/main.do";
+								}, 1000);
+							</script>
+						<% }
+							else{
+								//response.sendRedirect("/jsp_pj_126/main.do");	
+						%>
+							<script type = "text/javascript">
+								alert("회원가입을 축하드립니다!");
+ 								window.location="http://localhost/jsp_pj_126/login.do"; 
+							</script>
+						<% 	} 	%>
 			</div>
 		</div>
 	</container>

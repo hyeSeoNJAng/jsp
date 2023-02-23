@@ -50,9 +50,10 @@ public class CustomerDTO {
 	public String getHp() {
 		return hp;
 	}
-	public void setHp(String hp) {
-		this.hp = hp;
+	public void setHp(String hp1) {
+		this.hp = hp1;
 	}
+
 	public String getEmail() {
 		return email;
 	}

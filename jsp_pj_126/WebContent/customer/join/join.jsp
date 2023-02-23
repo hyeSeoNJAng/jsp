@@ -21,6 +21,8 @@
 		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
 		crossorigin="anonymous"></script>
 <script src="${path}/resources/js/customer/main.js" defer></script>
+<!-- join.js -->
+<script src = "${path}/resources/js/customer/join.js" defer></script>
 
 </head>
 <body>
@@ -38,24 +40,27 @@
 			<hr><br>
 			<div id = "section">
 				<div class = "join"> 
-					<form name = "joinform" action="${path}/joinAction.do" method="post">
+					<form name = "joinform" action="${path}/joinAction.do" method="post" onsubmit = "return signInCheck();">
+						<!-- 중복확인 2-1 -->
+						<input type = "hidden" name = "hiddenId" value = "0">
 						<table>
 							<tr>
 								<th>ID</th>
 								<td>
-									<input type = "text" class ="input" name = "id" size="15" placeholder="공백없이 15자 이내로 작성" autofocus required>
-								</td>
+									<input type = "text" class ="input" name = "id" size="20" placeholder="공백없이 15자 이내로 작성" autofocus required>
+									<input type ="button" name = "dupChk" value = "중복확인" style ="margin-left:10px;" onclick ="confirmId();">
+ 								</td>
 							</tr>	
 							<tr>
 								<th>비밀번호</th>
 								<td colspan = "2">
-									<input type = "password" class ="input" name = "password" size="15" placeholder="공백없이 15자 이내로 작성" required>
+									<input type = "password" class ="input" name = "password" size="20" placeholder="공백없이 15자 이내로 작성" required>
 								</td>
 							</tr>
 							<tr>
 								<th>비밀번호확인</th>
 								<td colspan = "2">
-									<input type = "password" class ="input" name = "repassword" size="15" placeholder="비밀번호 확인" required>
+									<input type = "password" class ="input" name = "repassword" size="20" placeholder="비밀번호 확인" required>
 								</td>
 							</tr>
 							<tr>
@@ -73,7 +78,7 @@
 							<tr>
 								<th>주소</th>
 								<td colspan = "2">
-									<input type = "text" class ="input" name = "address" size="60" placeholder="주소 작성" required>
+									<input type = "text" class ="input" name = "address" size="50" placeholder="주소 작성" required>
 								</td>
 							</tr>
 							<tr>
