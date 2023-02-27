@@ -1,0 +1,11 @@
+jsp->서비스 => req.getParameter(input명);
+서비스 -> jsp로 결과전송 => req.setAttribute("속성명", 결과값);
+jsp에서 받는다 => 결과값 = (형변환)req.getAttribute("속성명");
+
+M - DTO, DAO
+V - 화면(JSP)
+C - 서블릿  servlet
+
+         컨트롤러 -> 모델( 서비스 , DTO -> DAO(DB) )
+JSP <- 컨트롤러<-  모델( 서비스 , DTO <- DAO(DB) )
+
